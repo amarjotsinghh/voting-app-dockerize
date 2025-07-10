@@ -24,3 +24,57 @@ Docker Commands
   109  docker history
   110  sudo docker history
 sudo docker run -d --name=voting-app -p 5000:80 --link redis:redis amarjotsingh/voting-app
+
+  112  sudo docker history amarjotsingh/worker-app
+  113  cd ..
+  114  ls
+  115  cd result
+  116  ls
+  117  sudo docker build -f Dockerfile -t amarjotsingh/result-app .
+  118  cd ..
+  119  ls
+  120  sudo docker run -d --name=voting-app -p 5000:80 amarjotsingh/voting-app
+  121  docker ps
+  122  sudo docker ps
+  123  sudo docker run -d --name=redis redis
+  124  docker ps
+  125  sudo docker ps
+  126  sudo docker logs 02264e6263b1 
+  127  history
+  128  docker ps
+  129  sudo docker ps
+  130  sudo docker stop 022
+  131  sudo docker rm 022
+  132  docker ps
+  133  sudo docker ps
+  134  sudo docker run -d --name=voting-app -p 5000:80 --link redis:redis amarjotsingh/voting-app
+  135  git init
+  136  git add .
+  137  git status
+  138  git commit -m "adding files"
+  139  git remote add origin https://github.com/amarjotsinghh/voting-app-dockerize.git
+  140  git remote origin
+  141  git remote get-url
+  142  git remote get-url --all
+  143  git remote get-url --all origin
+  144  git remote add origin https://github.com/amarjotsinghh/voting-app-dockerize.git
+  145  git remote -v
+  146  git remote set-url origin https://github.com/amarjotsinghh/voting-app-dockerize.git
+  147  git remote -v
+  148  git push -u origin main
+  149  docker run -d -e POSTGRES_USER=postgres -e POSTGRES_PASSWORD=postgres --name=db postgres:9.4
+  150  sudo docker run -d -e POSTGRES_USER=postgres -e POSTGRES_PASSWORD=postgres --name=db postgres:9.4
+  151  docker ps
+  152  sudo docker ps
+  153  sudo docker logs d05
+  154  history
+
+  155  docker run -d --name=worker-app --link redis:redis --link db:db amarjotsingh/worker-app
+  156  sudo docker run -d --name=worker-app --link redis:redis --link db:db amarjotsingh/worker-app
+  157  docker ps 
+  158  sudo docker ps
+  159  docker run -d --name=result-app -p 5001:80 --link db:db amarjotsingh/result-app
+  160  sudo docker run -d --name=result-app -p 5001:80 --link db:db amarjotsingh/result-app
+  161  docker ps
+  162  sudo docker ps
+  163  history
