@@ -1,0 +1,26 @@
+Docker Commands
+
+ code .
+   89  ls -ltrh
+   90  cd vote
+   91  ls
+   92  sudo docker build -f Dockerfile -t amarjotsingh/voting-app .
+   93  docker image
+   94  sudo docker images
+   95  docker pull redis
+   96  sudo docker pull redis
+   97  sudo docker pull postgres:9.4
+   98  docker images
+   99  sudo docker images
+  100  cd ..
+  101  ls
+  102  cd worker
+  103  ls
+  104  docker build -f Dockerfile -t amarjotsingh/worker .
+  105  sudo docker build -f Dockerfile -t amarjotsingh/worker .
+  106  sudo docker build -f Dockerfile -t amarjotsingh/worker-app .
+  107  docker images
+  108  sudo docker images
+  109  docker history
+  110  sudo docker history
+sudo docker run -d --name=voting-app -p 5000:80 --link redis:redis amarjotsingh/voting-app
